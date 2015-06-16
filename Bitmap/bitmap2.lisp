@@ -7,9 +7,11 @@
 ;;; 可能会受到影响)
 ;;; 这中算法的优点在于从数量比较少的值为1的点开始像周围更新,然后在继续更新更新了
 ;;; 的点周围的点,继续迭代,直到更新完整个数组为止
-;;; common lisp 版本不知道为什么会各种报错,没法ac...
-(defvar *array* (make-array '(7 7) :element-type '(unsigned-byte 8) :initial-element 0))
-(defvar *max* 255)
+;;; 犯过的错误:
+;;; 1.update 的判断错了,导致会越界
+;;; 2.max的值应该比182*182要大,开始使用的是255...
+(defvar *array* (make-array '(182 182) :element-type '(unsigned-byte 16) :initial-element 0))
+(defvar *max* #XFFFF)
 
 (defstruct (queue (:type vector))
   head
