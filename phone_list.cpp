@@ -1,4 +1,5 @@
 // 3次SIGSEGV，因为arr大小不够,一次compilation error因为arr太大了
+// 修正:SIGSEGV 是因为开始data是char类型,数据溢出,导致下标成为负数了
 // 2次WA,因为data的类型用了char，所以以后编译时记得用-Wall，把警告都消除了
 #include <stdio.h>
 #include <memory.h>
