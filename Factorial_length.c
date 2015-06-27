@@ -1,8 +1,9 @@
 // https://en.wikipedia.org/wiki/Stirling's_approximation N!的近似解
 // e 的相关介绍
-// pi 的相关介绍
+// pi 的相关介绍 ...果壳上有
 // http://mathworld.wolfram.com/NumberLength.html 求数长度的公式
 // http://baike.baidu.com/link?url=DWklXlcaogPWfqAfZe-rvjJmDkx0THwY4vr9ylThQLCrEqEcYKFm0OZS8mhLb11OZDdO-mxd7Wcmw-FRYJAsgK 对数运算公式
+// log10 -> 10g2用的是对数换底公式
 #include <stdio.h>
 #include <math.h>
 
