@@ -4,7 +4,7 @@
 
 #define MB 1024 * 1024
 int len[21];
-int mlen[21];
+int mlen[21];   //len和mlen都可以优化掉,mlen用一个max变量即可,后面就无须遍历数组了
 char buffer[MB];
 char map[256];
 
@@ -32,6 +32,11 @@ void count(char *str)
             // 和该长度历史最大连续值进行比较
             if(len[lc] > mlen[lc]) 
                 mlen[lc] = len[lc];
+
+            // 1.这里没必要每次都判断,只在上一个连续片段结束时判断即可
+            // 2.没必要用len数组,使用一个变量即可.每次进入这个分支时
+            // 如果lc != ll且ll != 0,则变量len和max比较,然后len重置为1
+            // 开始新的片段计数,否则len继续增长
 
             // 如果这次的单词长度和上次的单词长度不一样
             // 则上一次不在连续,将len数组对应位置置为0
