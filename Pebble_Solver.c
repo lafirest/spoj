@@ -1,3 +1,4 @@
+// 简单的异或问题
 #include <stdio.h>
 
 char buffer[1024 * 1024];
