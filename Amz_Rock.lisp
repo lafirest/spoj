@@ -1,3 +1,5 @@
+;;; 没太明白题目意思,但是评论都说斐波拉契数列,就按斐波拉契来做了
+;;; 我自己列举的数据实际上和这个数列对不上
 (defun main ()
   (let ((ti (read))
         (fib (make-array 45 :element-type '(unsigned-byte 32) :initial-element 0)))
